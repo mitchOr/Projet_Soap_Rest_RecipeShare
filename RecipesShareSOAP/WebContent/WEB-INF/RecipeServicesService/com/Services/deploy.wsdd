@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from RecipeServicesService WSDL service -->
+
+  <service name="RecipeServices" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://Services.com"/>
+      <parameter name="wsdlServiceElement" value="RecipeServicesService"/>
+      <parameter name="schemaQualified" value="http://Services.com,http://Entites.com"/>
+      <parameter name="wsdlServicePort" value="RecipeServices"/>
+      <parameter name="className" value="com.Services.RecipeServices"/>
+      <parameter name="wsdlPortType" value="RecipeServices"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://Services.com" xmlns:retNS="http://Services.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="createRecipe" qname="operNS:createRecipe" returnQName="retNS:createRecipeReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:text" type="tns:string"/>
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:creationDate" type="tns:string"/>
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Author" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://Services.com" xmlns:retNS="http://Services.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="deleteRecipe" qname="operNS:deleteRecipe" returnQName="retNS:deleteRecipeReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:recipeId" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://Services.com" xmlns:retNS="http://Services.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="updateRecipe" qname="operNS:updateRecipe" returnQName="retNS:updateRecipeReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:text" type="tns:string"/>
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:creationDate" type="tns:string"/>
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Author" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://Services.com" xmlns:retNS="http://Services.com" xmlns:rtns="http://Entites.com" name="getRecipesByID" qname="operNS:getRecipesByID" returnQName="retNS:getRecipesByIDReturn" returnType="rtns:Recipe" soapAction="">
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userid" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://Services.com" xmlns:retNS="http://Services.com" xmlns:rtns="http://Entites.com" name="getRecipes" qname="operNS:getRecipes" returnQName="retNS:getRecipesReturn" returnType="rtns:Recipe" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://Services.com" xmlns:retNS="http://Services.com" xmlns:rtns="http://Entites.com" name="getRecipeByID" qname="operNS:getRecipeByID" returnQName="retNS:getRecipeByIDReturn" returnType="rtns:Recipe" soapAction="">
+        <parameter xmlns:pns="http://Services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:recipeId" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="getRecipesByID createRecipe updateRecipe getRecipeByID deleteRecipe getRecipes"/>
+
+      <typeMapping xmlns:ns="http://Entites.com" qname="ns:Recipe" type="java:com.Entites.Recipe" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://Services.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://Services.com" xmlns:intf="http://Services.com" xmlns:tns1="http://Entites.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://Services.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://Entites.com"/>
+   <element name="getUserbyLogPass">
+    <complexType>
+     <sequence>
+      <element name="login" type="xsd:string"/>
+      <element name="pass" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserbyLogPassResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserbyLogPassReturn" type="tns1:User"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateUser">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="fName" type="xsd:string"/>
+      <element name="lName" type="xsd:string"/>
+      <element name="birthDate" type="xsd:string"/>
+      <element name="login" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateUserResponse">
+    <complexType>
+     <sequence>
+      <element name="updateUserReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteUser">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteUserResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteUserReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUsers">
+    <complexType/>
+   </element>
+   <element name="getUsersResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getUsersReturn" type="tns1:User"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUser">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserReturn" type="tns1:User"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createUser">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="fName" type="xsd:string"/>
+      <element name="lName" type="xsd:string"/>
+      <element name="birthDate" type="xsd:string"/>
+      <element name="login" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createUserResponse">
+    <complexType>
+     <sequence>
+      <element name="createUserReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://Entites.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="User">
+    <sequence>
+     <element name="birthDate" nillable="true" type="xsd:string"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:int"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+     <element name="login" nillable="true" type="xsd:string"/>
+     <element name="password" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="deleteUserRequest">
+
+      <wsdl:part element="impl:deleteUser" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserResponse">
+
+      <wsdl:part element="impl:getUserResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserbyLogPassResponse">
+
+      <wsdl:part element="impl:getUserbyLogPassResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createUserResponse">
+
+      <wsdl:part element="impl:createUserResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserbyLogPassRequest">
+
+      <wsdl:part element="impl:getUserbyLogPass" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createUserRequest">
+
+      <wsdl:part element="impl:createUser" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserRequest">
+
+      <wsdl:part element="impl:updateUser" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserRequest">
+
+      <wsdl:part element="impl:getUser" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserResponse">
+
+      <wsdl:part element="impl:updateUserResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersRequest">
+
+      <wsdl:part element="impl:getUsers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteUserResponse">
+
+      <wsdl:part element="impl:deleteUserResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersResponse">
+
+      <wsdl:part element="impl:getUsersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UserServices">
+
+      <wsdl:operation name="getUserbyLogPass">
+
+         <wsdl:input message="impl:getUserbyLogPassRequest" name="getUserbyLogPassRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserbyLogPassResponse" name="getUserbyLogPassResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUser">
+
+         <wsdl:input message="impl:updateUserRequest" name="updateUserRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateUserResponse" name="updateUserResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteUser">
+
+         <wsdl:input message="impl:deleteUserRequest" name="deleteUserRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteUserResponse" name="deleteUserResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsers">
+
+         <wsdl:input message="impl:getUsersRequest" name="getUsersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUsersResponse" name="getUsersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUser">
+
+         <wsdl:input message="impl:getUserRequest" name="getUserRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserResponse" name="getUserResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createUser">
+
+         <wsdl:input message="impl:createUserRequest" name="createUserRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createUserResponse" name="createUserResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UserServicesSoapBinding" type="impl:UserServices">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getUserbyLogPass">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserbyLogPassRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserbyLogPassResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUsersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUsersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createUserResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UserServicesService">
+
+      <wsdl:port binding="impl:UserServicesSoapBinding" name="UserServices">
+
+         <wsdlsoap:address location="http://localhost:8080/RecipesShareSOAP/services/UserServices"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

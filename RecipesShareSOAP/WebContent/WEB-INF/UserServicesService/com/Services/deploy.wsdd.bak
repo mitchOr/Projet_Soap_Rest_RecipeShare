@@ -1,0 +1,62 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from UserServicesService WSDL service -->
+
+  <service name="UserServices" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://Services.com"/>
+      <parameter name="wsdlServiceElement" value="UserServicesService"/>
+      <parameter name="schemaQualified" value="http://Services.com,http://Entites.com"/>
+      <parameter name="wsdlServicePort" value="UserServices"/>
+      <parameter name="className" value="com.Services.UserServicesSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="UserServices"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getUserbyLogPass" qname="operNS:getUserbyLogPass" xmlns:operNS="http://Services.com" returnQName="retNS:getUserbyLogPassReturn" xmlns:retNS="http://Services.com" returnType="rtns:User" xmlns:rtns="http://Entites.com" soapAction="" >
+        <parameter qname="pns:login" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:pass" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="updateUser" qname="operNS:updateUser" xmlns:operNS="http://Services.com" returnQName="retNS:updateUserReturn" xmlns:retNS="http://Services.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://Services.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:fName" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:lName" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:birthDate" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:login" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:password" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="deleteUser" qname="operNS:deleteUser" xmlns:operNS="http://Services.com" returnQName="retNS:deleteUserReturn" xmlns:retNS="http://Services.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userid" xmlns:pns="http://Services.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getUsers" qname="operNS:getUsers" xmlns:operNS="http://Services.com" returnQName="retNS:getUsersReturn" xmlns:retNS="http://Services.com" returnType="rtns:User" xmlns:rtns="http://Entites.com" soapAction="" >
+      </operation>
+      <operation name="getUser" qname="operNS:getUser" xmlns:operNS="http://Services.com" returnQName="retNS:getUserReturn" xmlns:retNS="http://Services.com" returnType="rtns:User" xmlns:rtns="http://Entites.com" soapAction="" >
+        <parameter qname="pns:userid" xmlns:pns="http://Services.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="createUser" qname="operNS:createUser" xmlns:operNS="http://Services.com" returnQName="retNS:createUserReturn" xmlns:retNS="http://Services.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://Services.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:fName" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:lName" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:birthDate" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:login" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:password" xmlns:pns="http://Services.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getUsers getUser deleteUser updateUser createUser getUserbyLogPass"/>
+
+      <typeMapping
+        xmlns:ns="http://Entites.com"
+        qname="ns:User"
+        type="java:com.Entites.User"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

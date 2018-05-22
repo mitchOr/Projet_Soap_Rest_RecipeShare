@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://Services.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://Services.com" xmlns:intf="http://Services.com" xmlns:tns1="http://Entites.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://Services.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://Entites.com"/>
+   <element name="createRecipe">
+    <complexType>
+     <sequence>
+      <element name="text" type="xsd:string"/>
+      <element name="creationDate" type="xsd:string"/>
+      <element name="Author" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createRecipeResponse">
+    <complexType>
+     <sequence>
+      <element name="createRecipeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteRecipe">
+    <complexType>
+     <sequence>
+      <element name="recipeId" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteRecipeResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteRecipeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateRecipe">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="text" type="xsd:string"/>
+      <element name="creationDate" type="xsd:string"/>
+      <element name="Author" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateRecipeResponse">
+    <complexType>
+     <sequence>
+      <element name="updateRecipeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRecipesByID">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRecipesByIDResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getRecipesByIDReturn" type="tns1:Recipe"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRecipes">
+    <complexType/>
+   </element>
+   <element name="getRecipesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getRecipesReturn" type="tns1:Recipe"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRecipeByID">
+    <complexType>
+     <sequence>
+      <element name="recipeId" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRecipeByIDResponse">
+    <complexType>
+     <sequence>
+      <element name="getRecipeByIDReturn" type="tns1:Recipe"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://Entites.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="Recipe">
+    <sequence>
+     <element name="author" type="xsd:int"/>
+     <element name="creationDate" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:int"/>
+     <element name="text" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getRecipesByIDResponse">
+
+      <wsdl:part element="impl:getRecipesByIDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecipeByIDRequest">
+
+      <wsdl:part element="impl:getRecipeByID" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createRecipeResponse">
+
+      <wsdl:part element="impl:createRecipeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteRecipeResponse">
+
+      <wsdl:part element="impl:deleteRecipeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRecipeRequest">
+
+      <wsdl:part element="impl:updateRecipe" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecipesByIDRequest">
+
+      <wsdl:part element="impl:getRecipesByID" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecipesResponse">
+
+      <wsdl:part element="impl:getRecipesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecipeByIDResponse">
+
+      <wsdl:part element="impl:getRecipeByIDResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteRecipeRequest">
+
+      <wsdl:part element="impl:deleteRecipe" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createRecipeRequest">
+
+      <wsdl:part element="impl:createRecipe" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRecipeResponse">
+
+      <wsdl:part element="impl:updateRecipeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRecipesRequest">
+
+      <wsdl:part element="impl:getRecipes" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="RecipeServices">
+
+      <wsdl:operation name="createRecipe">
+
+         <wsdl:input message="impl:createRecipeRequest" name="createRecipeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createRecipeResponse" name="createRecipeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteRecipe">
+
+         <wsdl:input message="impl:deleteRecipeRequest" name="deleteRecipeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteRecipeResponse" name="deleteRecipeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateRecipe">
+
+         <wsdl:input message="impl:updateRecipeRequest" name="updateRecipeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateRecipeResponse" name="updateRecipeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecipesByID">
+
+         <wsdl:input message="impl:getRecipesByIDRequest" name="getRecipesByIDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRecipesByIDResponse" name="getRecipesByIDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecipes">
+
+         <wsdl:input message="impl:getRecipesRequest" name="getRecipesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRecipesResponse" name="getRecipesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecipeByID">
+
+         <wsdl:input message="impl:getRecipeByIDRequest" name="getRecipeByIDRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRecipeByIDResponse" name="getRecipeByIDResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="RecipeServicesSoapBinding" type="impl:RecipeServices">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createRecipe">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createRecipeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createRecipeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteRecipe">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteRecipeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteRecipeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateRecipe">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateRecipeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateRecipeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecipesByID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRecipesByIDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRecipesByIDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecipes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRecipesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRecipesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRecipeByID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRecipeByIDRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRecipeByIDResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="RecipeServicesService">
+
+      <wsdl:port binding="impl:RecipeServicesSoapBinding" name="RecipeServices">
+
+         <wsdlsoap:address location="http://localhost:8080/RecipesShareSOAP/services/RecipeServices"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

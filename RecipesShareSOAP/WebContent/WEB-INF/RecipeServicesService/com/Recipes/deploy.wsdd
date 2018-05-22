@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from RecipeServicesService WSDL service -->
+
+  <service name="RecipeServices" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://Recipes.com"/>
+      <parameter name="wsdlServiceElement" value="RecipeServicesService"/>
+      <parameter name="schemaQualified" value="http://Recipes.com"/>
+      <parameter name="wsdlServicePort" value="RecipeServices"/>
+      <parameter name="className" value="com.Recipes.RecipeServices"/>
+      <parameter name="wsdlPortType" value="RecipeServices"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://Recipes.com" xmlns:retNS="http://Recipes.com" xmlns:rtns="http://Recipes.com" name="create" qname="operNS:create" returnQName="retNS:createReturn" returnType="rtns:Recipe" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://Recipes.com" xmlns:retNS="http://Recipes.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="authorisation" qname="operNS:authorisation" returnQName="retNS:authorisationReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://Recipes.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:login" type="tns:string"/>
+        <parameter xmlns:pns="http://Recipes.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:password" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="authorisation create"/>
+
+      <typeMapping xmlns:ns="http://Recipes.com" qname="ns:Recipe" type="java:com.Recipes.Recipe" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

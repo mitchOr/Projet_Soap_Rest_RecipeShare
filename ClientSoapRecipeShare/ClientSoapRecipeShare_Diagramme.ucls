@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="true" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.Services.UserServicesSoapBindingStub" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/UserServicesSoapBindingStub.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="198" x="-143" y="133"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.Services.RecipeServicesSoapBindingStub" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/RecipeServicesSoapBindingStub.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="54" width="210" x="-149" y="381"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.Services.AuthenticationServiceProxy" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/AuthenticationServiceProxy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="182" x="68" y="635"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.Services.RecipeServicesProxy" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/RecipeServicesProxy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="146" x="69" y="379"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.Services.UserServicesServiceLocator" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/UserServicesServiceLocator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="54" width="188" x="225" y="128"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="com.Services.RecipeServices" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/RecipeServices.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="56" width="113" x="-137" y="224"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="com.Services.RecipeServicesServiceLocator" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/RecipeServicesServiceLocator.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="54" width="205" x="239" y="382"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.Services.AuthenticationServiceSoapBindingStub" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/AuthenticationServiceSoapBindingStub.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="246" x="-191" y="639"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="com.Services.AuthenticationService" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/AuthenticationService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="149" x="-145" y="473"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="com.Services.UserServicesService" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/UserServicesService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="152" x="105" y="-43"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="11" language="java" name="com.Services.RecipeServicesService" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/RecipeServicesService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="156" x="168" y="222"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="12" language="java" name="com.Services.UserServices" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/UserServices.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="104" x="-127" y="-46"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="13" language="java" name="com.Services.UserServicesProxy" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/UserServicesProxy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="134" x="70" y="130"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="com.Services.AuthenticationServiceService" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/AuthenticationServiceService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="192" x="165" y="469"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="com.Services.AuthenticationServiceServiceLocator" project="ClientSoapRecipeShare" 
+    file="/ClientSoapRecipeShare/src/com/Services/AuthenticationServiceServiceLocator.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="236" x="275" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="16">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="17">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <realization id="18">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="20">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <association id="21">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="22" name="userServices"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="24">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="25" name="recipeServices"/>      
+      <multiplicity id="26" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="27">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="28">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="29">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="30" name="authenticationService"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="32">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <realization id="33">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

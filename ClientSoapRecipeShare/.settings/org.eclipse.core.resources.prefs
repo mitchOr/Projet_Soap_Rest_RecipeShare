@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/com/Entites/Recipe.java=UTF-8
+encoding//src/com/Entites/User.java=UTF-8
+encoding//src/com/Services/AuthenticationService.java=UTF-8
+encoding//src/com/Services/AuthenticationServiceService.java=UTF-8
+encoding//src/com/Services/AuthenticationServiceServiceLocator.java=UTF-8
+encoding//src/com/Services/AuthenticationServiceSoapBindingStub.java=UTF-8
+encoding//src/com/Services/RecipeServices.java=UTF-8
+encoding//src/com/Services/RecipeServicesService.java=UTF-8
+encoding//src/com/Services/RecipeServicesServiceLocator.java=UTF-8
+encoding//src/com/Services/RecipeServicesSoapBindingStub.java=UTF-8
+encoding//src/com/Services/UserServices.java=UTF-8
+encoding//src/com/Services/UserServicesService.java=UTF-8
+encoding//src/com/Services/UserServicesServiceLocator.java=UTF-8
+encoding//src/com/Services/UserServicesSoapBindingStub.java=UTF-8
